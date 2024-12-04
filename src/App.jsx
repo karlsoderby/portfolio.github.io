@@ -5,12 +5,13 @@ import { Projects } from "./components/projects";
 import { Child } from "./components/child";
 import "./tailwind.css"; // Assuming Tailwind is installed and configured properly
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import TortugasPage from "./projects/tortugas/tortugas";
+import TortugasPage from "./projects/tortugas";
 
 import Arduino from "./assets/arduino.png";
 import Ventanas from "./assets/ventanas.png";
 import Tortugas from "./assets/tortugas.png";
 import Polly from "./assets/polly.png";
+import Ventanas95Page from "./projects/ventanas95";
 
 function App() {
   return (
@@ -52,7 +53,7 @@ function App() {
       </nav>
 
       {/* Main Content Area */}
-      <div className="flex-grow p-1 bg-white mx-auto max-w-screen-xl w-[90%]">
+      <div className="flex-grow p-1 bg-white mx-auto max-w-screen-xl w-[60%]">
         <Link to="/" className=" text-black text-2xl font-bold">
           Karl Söderby
         </Link>
@@ -69,6 +70,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/tortugas" element={<TortugasPage />} />
+          <Route path="/ventanas95" element={<Ventanas95Page />} />
         </Routes>
       </div>
 
@@ -99,7 +101,7 @@ function Home() {
         <Child
           title="Ventanas95"
           description="Designing and developing a styling tool for a Storyblok plugin."
-          link="/about"
+          link="/ventanas95"
           styling="w-[250px]"
           image={Ventanas}
           tags={[{ value: "UI / UX" }, { value: "Development" }]}

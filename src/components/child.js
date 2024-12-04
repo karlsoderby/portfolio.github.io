@@ -12,12 +12,13 @@ export const Child = ({
     <Link to={link} className={`${styling}`}>
       <div
         className={
-          "bg-white transition duration-300 pb-5 hover:rounded-md hover:bg-gradient-to-b from-sky-100 to-white"
+          "bg-white h-[400px] transition duration-300 pb-5 hover:rounded-md hover:bg-gradient-to-b from-sky-100 to-white"
         }
       >
         {image && <img src={image} alt={title} className="mb-4 rounded-lg" />}
-        <h4 className={"text-lg font-afacad-flux text-center"}>{title}</h4>
-        <p className={"font-afacad-flux text-balance pt-1 pl-8 pr-8 text-lg"}>
+        <div className="ml-4">
+        <h4 className={"text-lg font-afacad-flux"}>{title}</h4>
+        <p className={"font-afacad-flux text-balance pt-1 text-lg"}>
           {description}
           <p className={"flex flex-wrap pt-3"}>
             {tags &&
@@ -28,6 +29,7 @@ export const Child = ({
               ))}
           </p>
         </p>
+        </div>
       </div>
     </Link>
   );
